@@ -7,13 +7,15 @@ int main(void)
 {
 	int interger;
 	float floating;
-	double df;
+	long int li;
+	long long int lli;
 	char character;
 
 	printf("Size of a char: %zu byte(s)\n", sizeof(character));
 	printf("Size of a int: %zu byte(s)\n", sizeof(interger));
 	printf("Size of a float: %zu byte(s)\n", sizeof(floating));
-	printf("Size of a double: %zu byte(s)\n", sizeof(df));
+	printf("Size of a long int: %zu byte(s)\n", sizeof(li));
+	printf("Size of a long long int: %zu byte(s)\n", sizeof(lli));
 
 	return (0);
 }
