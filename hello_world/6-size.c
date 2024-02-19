@@ -18,6 +18,5 @@ int main(void)
 	printf("Size of a long long int: %zu byte(s)\n", sizeof(lli));
 
 	return (0);
-
 }
 
