@@ -1,6 +1,10 @@
 #include "main.h"
 /**
- * int _islower - verifies if the input is lowercase
+ * _islower - verifies if the input is lowercase
+ *
+ * @c: number for evaluation
+ *
+ * Return: 1 Success
  */
 int _islower(int c)
 {
