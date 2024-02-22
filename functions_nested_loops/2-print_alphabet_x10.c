@@ -5,10 +5,12 @@
  */
 void print_alphabet_x10(void)
 {
-	int newLine;
+	int alpha, new;
 
-	for (newLine = 0; newLine <= 10; newLine++)
+	for (alpha = 0; alpha <= 10; alpha++)
 	{
-		print_alphabet();
+		for (new = 97; new <= 122; new++)
+			_putchar(new);
+		_putchar('\n');
 	}
 }
