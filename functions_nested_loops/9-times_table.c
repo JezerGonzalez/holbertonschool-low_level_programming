@@ -1,5 +1,6 @@
 #include "main.h"
 /**
+ * times_table - prints multiplication table
  *
  */
 void times_table(void)
