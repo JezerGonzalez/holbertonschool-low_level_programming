@@ -1,50 +1,48 @@
 #include "main.h"
+
+
+#include <stdio.h>
+
+
 /**
- * print_to_98 - prints all natural numbers from n to 98
- *
- * @n: starter number input
- *
- * Return: Void
+ * print_to_98 - print a program to 98
+ * @n: The number to start printing
+ * Return: Always 0.
  */
+
+
 void print_to_98(int n)
 {
-	for (; n != 98; )
+	if (n <= 98)
 	{
-		if (n < 98 && n >= 0)
-		{
-			if (n >= 10)
-				_putchar((n / 10) + '0');
-			_putchar((n % 10) + '0');
-			_putchar(',');
-			_putchar(' ');
-			n++;
-		}
-		if (n > 98)
-		{
-			if (n >= 100)
-			{
-				_putchar((n / 100) + '0');
-				_putchar(((n % 100) / 10) + '0');
-			}
-			else
-				_putchar((n / 10) + '0');
-			_putchar((n % 10) + '0');
-			_putchar(',');
-			_putchar(' ');
-			n--;
-		}
-		if (n < 0)
-		{
-			_putchar('-');
-			if (n <= -10)
-				_putchar(((n * -1) / 10) + '0');
-			_putchar(((n * -1) % 10) + '0');
-			_putchar(',');
-			_putchar(' ');
-			n++;
-		}
+	for (; n <= 98; n++)
+	{
+	if (n == 98)
+	{
+	printf("%d", n);
+	printf("\n");
+	break;
 	}
-	_putchar('9');
-	_putchar('8');
-	_putchar('\n');
+	else
+	{
+	printf("%d, ", n);
+	}
+	}
+	}
+	else
+	{
+	for (; n >= 98; n--)
+	{
+	if (n == 98)
+	{
+	printf("%d", n);
+	printf("\n");
+	break;
+	}
+	else
+	{
+		printf("%d, ", n);
+	}
+	}
+	}
 }
