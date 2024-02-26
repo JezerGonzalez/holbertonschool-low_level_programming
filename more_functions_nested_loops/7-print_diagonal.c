@@ -17,7 +17,7 @@ void print_diagonal(int n)
 			if (line != n - 1)
 			{
 			for (space = 0; space <= line; space++)
-				_putchar('$');
+				_putchar(' ');
 			}
 		}
 	}
