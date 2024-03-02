@@ -20,7 +20,7 @@ void puts_half(char *str)
 			_putchar(str[i]);
 		}
 	}
-	else if (length % 3 == 0)
+	else if (length % 2)
 	{
 		i = (length - 1) / 2;
 		for (; i < length; i++)
@@ -28,14 +28,6 @@ void puts_half(char *str)
 			_putchar(str[i]);
 		}
 	}
-	else if (length % 5 == 1)
-	{
-		i = (length - 1) / 2;
 
-		for (; i < length; i++)
-		{
-			_putchar(str[i]);
-		}
-	}
 	_putchar('\n');
 }
