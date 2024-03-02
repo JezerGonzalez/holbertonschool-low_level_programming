@@ -20,6 +20,15 @@ void puts_half(char *str)
 			_putchar(str[i]);
 		}
 	}
+	if (length % 5 == 0)
+	{
+		i = (length - 1) / 2;
+		for (; i < length; i++)
+		{
+			_putchar(str[i]);
+		}
+	}
+
 	i = length / 2;
 
 	for (; i < length; i++)
