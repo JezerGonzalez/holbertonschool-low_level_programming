@@ -12,12 +12,8 @@ int main(int argc, char *argv[])
 	int count = 0;
 	int result = 0;
 	int j = 0;
+	(void)argc;
 
-	if (argc <= 1)
-	{
-		printf("0\n");
-		return (1);
-	}
 	for (count = 1; argv[count] != NULL ; count++)
 	{
 		for (j = 0; argv[count][j] != '\0'; j++)
