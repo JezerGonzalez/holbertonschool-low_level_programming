@@ -19,19 +19,10 @@ char *str_concat(char *s1, char *s2)
 	{}
 	for (size2 = 0; s2[size2] != '\0'; size2++)
 	{}
-
-	printf("size1: %d size2: %d\n", size1, size2);
-
 	totalsize = size1 + size2;
-
-	printf("totalsize: %d\n", totalsize);
-
 	ptr = malloc((totalsize + 1) * sizeof(char));
 	if (ptr == NULL)
 		return (NULL);
-
-	printf("s1: %s s2: %s\n", s1, s2);
-
 	for (i = 0; *s1 != '\0'; s1++, i++)
 		ptr[i] = *s1;
 	for (; *s2 != '\0'; s2++, i++)
