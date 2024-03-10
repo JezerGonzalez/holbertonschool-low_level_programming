@@ -9,10 +9,12 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	int *ptr;
 	int *ptr2;
+	unsigned int total;
 
 	if (size == 0 || nmemb == 0)
 		return (NULL);
-	ptr = malloc(size * nmemb);
+	total = size * nmemb;
+	ptr = malloc(total);
 	if (ptr == NULL)
 		return (NULL);
 	ptr2 = ptr;
