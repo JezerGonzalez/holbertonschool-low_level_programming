@@ -4,19 +4,19 @@
 /**
  *_strdup - duplicates string
  *@dest: empty string
- *@src: string to be duplicated
  * Return: Duplicated string
  */
 char *_strdup(char *dest)
 {
 	int i, length;
 	char *ptr;
+
 	for (length = 0; dest[length] != '\0'; length++)
 	{}
 	ptr = malloc((length + 1) * sizeof(char));
 	if (ptr == NULL)
 		return (NULL);
-	for (i = 0; ptr[i] != '\0'; i++)
+	for (i = 0; dest[i] != '\0'; i++)
 		ptr[i] = dest[i];
 	return (ptr);
 }
@@ -30,7 +30,6 @@ char *_strdup(char *dest)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int length_name, length_owner;
 	dog_t *new_dog;
 
 	new_dog = malloc(sizeof(dog_t));
@@ -38,7 +37,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	new_dog->name = _strdup(name);
 	new_dog->owner = _strdup(owner);
-	if (new_dog->name == NULL)
+	if (new_dog->name == NULL || new_dog->owner == NULL)
 	{
 		free(new_dog->name);
 		free(new_dog->owner);
