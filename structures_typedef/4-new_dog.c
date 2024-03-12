@@ -8,8 +8,9 @@
  */
 char *_strdup(char *dest)
 {
-	int i, length;
-	char *ptr;
+	int i = 0;
+	int length = 0;
+	char *ptr = NULL;
 
 	for (length = 0; dest[length] != '\0'; length++)
 	{}
