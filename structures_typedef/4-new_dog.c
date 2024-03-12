@@ -3,7 +3,7 @@
 #include "dog.h"
 /**
  *_strdup - duplicates string
- *@dest: empty string
+ *@src: empty string
  * Return: Duplicated string
  */
 char *_strdup(char *src)
@@ -36,7 +36,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *new_dog = NULL;
 
-	if(name == NULL || owner == NULL)
+	if (name == NULL || owner == NULL)
 		return (NULL);
 	new_dog = malloc(sizeof(dog_t));
 	if (new_dog == NULL)
