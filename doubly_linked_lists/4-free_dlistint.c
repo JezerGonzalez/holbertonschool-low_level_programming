@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- *free_list - frees the dynamic memory
+ *free_dlistint - frees the dynamic memory
  *@head: pointer
  */
 void free_dlistint(dlistint_t *head)
