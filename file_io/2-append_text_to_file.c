@@ -7,7 +7,7 @@
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int new_file, len, new_text;
+	int existing_file, len, new_text;
 
 	if (filename == NULL)
 		return (-1);
@@ -16,15 +16,17 @@ int append_text_to_file(const char *filename, char *text_content)
 		for (len = 0; text_content[len] != '\0'; len++)
 			;
 	}
-	new_file = open(filename, O_WRONLY | O_APPEND);
-	if (new_file == -1)
+	existing_file = open(filename, O_WRONLY | O_APPEND);
+	if (existing_file == -1)
 		return (-1);
-	new_text = write(new_file, text_content, len);
+	new_text = write(existing_file, text_content, len);
+	if (new_text == -1)
+		return (-1);
 	if (new_text != len)
 	{
-		close(new_file);
+		close(existing_file);
 		return (-1);
 	}
-	close(new_file);
+	close(existing_file);
 	return (1);
 }
