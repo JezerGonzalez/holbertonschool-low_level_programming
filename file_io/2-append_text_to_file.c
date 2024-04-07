@@ -22,11 +22,6 @@ int append_text_to_file(const char *filename, char *text_content)
 		if (new_text == -1)
 			return (-1);
 	}
-	if (new_text != len)
-	{
-		close(existing_file);
-		return (-1);
-	}
 	close(existing_file);
 	return (1);
 }
